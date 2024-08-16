@@ -5,11 +5,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint \"src\"",
-    "start": "dotenv -c '.env' -- node dist/app",
-    "typeorm": "dotenv -c '.env' -- typeorm -d \"./dist/db/datasource.js\"",
-    "migration:generate": "yarn typeorm migration:generate",
-    "migration:run": "yarn typeorm migration:run",
-    "migration:rollback": "yarn typeorm migration:revert"
+    "start": "dotenv -c '.env' -- node dist/app"
   },
   "dependencies": {
     "@adminjs/express": "^6.1.0",
