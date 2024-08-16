@@ -4,14 +4,11 @@ import { buildAuthenticatedRouter } from '@adminjs/express';
 
 import provider from './admin/auth-provider.js';
 import options from './admin/options.js';
-import initializeDb from './db/index.js';
 
 const port = process.env.PORT || 3000;
 
 const start = async () => {
   const app = express();
-
-  await initializeDb();
 
   const admin = new AdminJS(options);
 
